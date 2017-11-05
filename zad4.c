@@ -15,18 +15,19 @@ int main()
 
   printf("Podaj c:\n");
   scanf("%d",&c);
-  int akwadrat=a*a;
-  int bkwadrat=b*b;
-  int ckwadrat=c*c;
-
-
   if(a>0 && b>0 && c>0)
   {
-  if (a*a+b*b==c*c || a*a+c*c==b*b || b*b+c*c==a*a)
+  int n = (a*a+b*b==c*c || a*a+c*c==b*b || b*b+c*c==a*a);
 
-      printf("Trojka istnieje dla liczb: %d %d %d \n",a,b,c);
 
+      switch(n)
+    {
+      case 1: printf("Brawo! jest trojka \n");
+      break;
+      case 0: printf("Buuuuuuuuuuuuuu \n");
+      break;
+    }
+  }
   else
-     return EXIT_FAILURE;
-}
+  return EXIT_FAILURE;
 }
